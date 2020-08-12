@@ -1,2 +1,4 @@
-sudo apt install snapd -y
-snap install hugo --channel=extended
+CI=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+echo 'eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)' >> /home/codespace/.profile
+eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+brew install hugo
